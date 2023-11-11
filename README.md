@@ -1,2 +1,3 @@
 # JS-projects
-My JS Projects
+
+My personal JS Projects to understand and JS more
