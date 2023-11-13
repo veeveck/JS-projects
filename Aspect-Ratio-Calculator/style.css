@@ -28,3 +28,40 @@ h2 {
 h2 span {
   color: #895cf3;
 }
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0 70px 0;
+  gap: 10px;
+}
+.wrapper input {
+  width: 100px;
+  font-size: 30px;
+  font-weight: 600;
+}
+input {
+  padding: 15px 10px;
+  border: 1px solid #bbc0c5;
+  border-radius: 5px;
+  color: #170444;
+  outline: none;
+}
+input:focus {
+  border: 2px solid #895cf3;
+}
+label {
+  color: #170444;
+  font-weight: 600;
+  letter-spacing: 0.6;
+}
+.box {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+.field-1 input,
+.field-2 input {
+  width: 100%;
+  font-size: 18px;
+}
