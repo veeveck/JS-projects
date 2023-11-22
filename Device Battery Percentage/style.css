@@ -5,3 +5,90 @@
   margin: 0;
   padding: 0;
 }
+:root {
+  --gradient-color-red: linear-gradient(
+    90deg,
+    hsl(7, 89%, 46%) 15%,
+    hsl(11, 93%, 68%) 100%
+  );
+  --gradient-color-orange: linear-gradient(
+    90deg,
+    hsl(22, 89%, 46%) 15%,
+    hsl(54, 90%, 68%) 100%
+  );
+  --gradient-color-yellow: linear-gradient(
+    90deg,
+    hsl(54, 89%, 46%) 15%,
+    hsl(92, 90%, 45%) 100%
+  );
+  --gradient-color-green: linear-gradient(
+    90deg,
+    hsl(92, 89%, 46%) 15%,
+    hsl(92, 90%, 68%) 100%
+  );
+}
+body {
+  background: #070707;
+  color: #fff;
+}
+.battery {
+  height: 100vh;
+  display: grid;
+  margin: 0 1.5rem;
+  place-items: center;
+}
+.battery-card {
+  position: relative;
+  width: 320px;
+  height: 250px;
+  background: #222;
+  padding: 0.5rem 1.5rem;
+  border-radius: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+.battery-text {
+  margin-bottom: 0.5rem;
+}
+.battery-percent {
+  font-size: 2.5rem;
+}
+.battery-status {
+  position: absolute;
+  bottom: 3.5rem;
+  display: flex;
+  align-items: center;
+  column-gap: 0.3rem;
+  font-size: 0.8rem;
+}
+.battery-status i {
+  font-size: 1.25 rem;
+}
+.battery-pill {
+  position: relative;
+  width: 75px;
+  height: 180px;
+  background-color: #222;
+  box-shadow: inset 20px 0 48px hsl(0, 0%, 16%),
+    inset -4px 12px 48px hsl(0, 0%, 56%);
+  border-radius: 3rem;
+  justify-self: flex-start;
+}
+.battery-level {
+  position: absolute;
+  inset: 2px;
+  border-radius: 3rem;
+  overflow: hidden;
+}
+.battery-liquid {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 36px;
+  background: var(--gradient-color-red);
+  box-shadow: inset -10px 0 12px hsla(0, 0%, 0%, 0.1),
+    inset 12px 0 12px hsla(0, 0%, 0%, 0.15);
+  transition: 0.3s;
+}
