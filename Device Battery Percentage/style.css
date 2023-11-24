@@ -141,3 +141,22 @@ body {
     text-shadow: 0 0 8px hsl(7, 89%, 46%);
   }
 }
+.gradient-color-red,
+.green-color-red::after {
+  background: var(--gradient-color-red);
+}
+
+.gradient-color-green,
+.green-color-green::after {
+  background: var(--gradient-color-green);
+}
+
+.gradient-color-orange,
+.green-color-orange::after {
+  background: var(--gradient-color-orange);
+}
+
+.gradient-color-yellow,
+.green-color-yellow::after {
+  background: var(--gradient-color-yellow);
+}
