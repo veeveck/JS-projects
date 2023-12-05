@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Type App</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="stats">
+            <p>Time : <span id="timer">10s</span></p>
+            <p>Mistakes : <span id="mistakes">5</span></p>
+        </div>
+        <div id="quote" onmousedown="return false" onselectstart="return false">
+
+        </div>
+        <textarea id="write-input" rows="3" placeholder="Type here when test starts..."></textarea>
+        <button id="start-test">Start</button>
+        <button id="stop-test">Stop<button>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
