@@ -16,6 +16,31 @@ const renderNewQuote = async () => {
   });
   quoteSection.innerHTML += arr.join("");
 };
+userInput.addEventListener("input", () => {
+  let quoteChars = document.querySelectorAll(".quote-chars");
+  quoteChars = Array.from(quoteChars);
+
+  let userChars = userInput.value.split("");
+  quoteChars.forEach((char, index) => {
+    // check user char with user char
+    if (char.innerText == userChars[index]) {
+      char.classList.add("success");
+      //user backspaced
+    } else if (userChars[index] == null) {
+      if (char.classList.contains("success")) {
+        char.classList.remove("success");
+      } else {
+        char.classList.remove("fail");
+      }
+    }
+    //user enters wrong character
+    else {
+      char.classList.add("fail");
+      mistakes++;
+      document.getElementById("mistakes").innerText = mistakes;
+    }
+  });
+});
 window.onload = () => {
   userInput.value = "";
   document.getElementById("start-test").style.display = "block";
