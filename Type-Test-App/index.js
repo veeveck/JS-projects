@@ -11,7 +11,10 @@ const renderNewQuote = async () => {
   const response = await fetch(quoteApiUrl);
   let data = await response.json();
   quote = data.content;
-  quoteSection.innerHTML = quote;
+  let arr = quote.split("").map((val) => {
+    return "<span class='quote-chars'>" + val + "</span>";
+  });
+  quoteSection.innerHTML += arr.join("");
 };
 window.onload = () => {
   userInput.value = "";
