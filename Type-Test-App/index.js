@@ -36,8 +36,10 @@ userInput.addEventListener("input", () => {
     }
     //user enters wrong character
     else {
-      char.classList.add("fail");
-      mistakes++;
+      if (!char.classList.contains("fail")) {
+        char.classList.add("fail");
+        mistakes++;
+      }
       document.getElementById("mistakes").innerText = mistakes;
     }
     let check = quoteChars.every((el) => {
@@ -70,6 +72,12 @@ const displayResult = () => {
   if (time != 0) {
     timeTaken = (30 - time) / 100;
   }
+  document.getElementById("words-per-minute").innerText =
+    (userInput.value.length / 5 / timeTaken).toFixed(2) + "wpm";
+  document.getElementById("accuracy").innerText =
+    Math.round(
+      ((userInput.value.length - mistakes) / userInput.value.length) * 100
+    ) + "%";
 };
 const startTest = () => {
   mistakes = 0;
@@ -84,5 +92,6 @@ window.onload = () => {
   userInput.value = "";
   document.getElementById("start-test").style.display = "block";
   document.getElementById("stop-test").style.display = "none";
+  userInput.disabled = true;
   renderNewQuote();
 };
