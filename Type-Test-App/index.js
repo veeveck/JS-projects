@@ -16,6 +16,7 @@ const renderNewQuote = async () => {
   });
   quoteSection.innerHTML += arr.join("");
 };
+
 userInput.addEventListener("input", () => {
   let quoteChars = document.querySelectorAll(".quote-chars");
   quoteChars = Array.from(quoteChars);
@@ -39,8 +40,46 @@ userInput.addEventListener("input", () => {
       mistakes++;
       document.getElementById("mistakes").innerText = mistakes;
     }
+    let check = quoteChars.every((el) => {
+      return el.classList.contains("success");
+    });
+    if (check) {
+      displayResult();
+    }
   });
 });
+//Set Timer
+const timeReduce = () => {
+  time = 30;
+  timer = setInterval(updateTimer, 1000);
+};
+function updateTimer() {
+  if (time == 0) {
+    displayResult();
+  } else {
+    document.getElementById("timer").innerText = --time + "s";
+  }
+}
+
+const displayResult = () => {
+  document.querySelector(".result").style.display = "block";
+  clearInterval(timer);
+  document.getElementById("stop-test").style.display = "none";
+  userInput.disabled = true;
+  let timeTaken = 1;
+  if (time != 0) {
+    timeTaken = (30 - time) / 100;
+  }
+};
+const startTest = () => {
+  mistakes = 0;
+  timer = "";
+  userInput.disabled = false;
+  timeReduce();
+  document.getElementById("start-test").style.display = "none";
+  document.getElementById("stop-test").style.display = "block";
+};
+
 window.onload = () => {
   userInput.value = "";
   document.getElementById("start-test").style.display = "block";

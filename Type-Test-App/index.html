@@ -9,8 +9,8 @@
   <body>
     <div class="container">
       <div class="stats">
-        <p>Time : <span id="timer">10s</span></p>
-        <p>Mistakes : <span id="mistakes">5</span></p>
+        <p>Time : <span id="timer">30s</span></p>
+        <p>Mistakes : <span id="mistakes">0</span></p>
       </div>
       <div
         id="quote"
@@ -22,8 +22,8 @@
         rows="3"
         placeholder="Type here when test starts..."
       ></textarea>
-      <button id="start-test">Start</button>
-      <button id="stop-test">Stop</button>
+      <button id="start-test" onclick="startTest()">Start</button>
+      <button id="stop-test" onclick="displayResult()">Stop</button>
       <div class="result">
         <h4>Result</h4>
         <div class="wrapper">
