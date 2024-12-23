@@ -1,0 +1,58 @@
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+h2 {
+    margin-bottom: 0.4em;
+ }
+body {
+    background-color: #F4F1DE;
+    font-family: Arial, sans-serif;
+}
+header {
+    background-color: #3B1C0B;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+.hamburger{
+    margin-left:-20px;
+    margin-top:7px;
+}
+.logo-container {
+    display: inline-block;
+}
+.logo {
+    height: 50px;
+    margin-right: 20px;
+}
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+.welcome {
+    background-color: #C08552;
+    color: white;
+}
+.shop{
+    background-color: #F4F1DE;
+}
+.shop .coffee-list {
+    list-style: none;
+}
+.about-us {
+    background-color: #C08552;
+    color: white;
+}  
+footer {
+    background-color: #3B1C0B;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+footer.h2{
+    color:white;
+}
+.add-to-cart-button {
+    margin-left: 1em;
+}
